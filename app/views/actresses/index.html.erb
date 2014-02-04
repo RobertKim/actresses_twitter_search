@@ -1,0 +1,48 @@
+<h1>American Film Actresses</h1>
+<p>
+  To download the database to CSV, click
+  <%= link_to 'here', actresses_path(format: "csv") %>
+</p>
+<p>
+  Enter a Name to Search the Database:
+  <%= form_tag actresses_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
+    </p>
+  <% end %>
+</p>
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Actress</th>
+
+      <th>Twitter url</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @actresses.each do |actress| %>
+      <tr>
+        <td><%= link_to actress.actress, actress_path(actress) %></td>
+        <% if actress.twitter_url.present? %>
+          <td><%= link_to actress.twitter_url, actress.twitter_url %></td>
+        <% else %>
+          <td></td>
+        <% end %>
+          <td><%= link_to 'Show', actress %></td>
+          <td><%= link_to 'Edit', edit_actress_path(actress) %></td>
+          <td><%= link_to 'Destroy', actress, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
