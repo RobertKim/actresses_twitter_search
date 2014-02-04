@@ -4,8 +4,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 gem 'twitter'
 gem "nokogiri", "~> 1.6.1"
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -34,13 +32,13 @@ group :doc do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0.beta'
+	gem 'sqlite3'
 end
 
 group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
+	gem 'pg'
 end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
