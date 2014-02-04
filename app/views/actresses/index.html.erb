@@ -18,11 +18,7 @@
   <thead>
     <tr>
       <th>Actress</th>
-
       <th>Twitter URL</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
@@ -36,8 +32,6 @@
           <td></td>
         <% end %>
           <td><%= link_to 'Show', actress %></td>
-          <td><%= link_to 'Edit', edit_actress_path(actress) %></td>
-          <td><%= link_to 'Destroy', actress, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
