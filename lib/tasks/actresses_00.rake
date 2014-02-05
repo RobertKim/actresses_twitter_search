@@ -10,7 +10,7 @@ require 'twitter'
   actress = doc.css(".columns a").each do |actress|
   	star = Actress.create(:actress => actress.text)
   	# DetectTwitterUser.new(star).save_url_if_verified
-  	Model.last(n).each(&:destroy)
+  	# Model.last(n).each(&:destroy)
   end
 
 end

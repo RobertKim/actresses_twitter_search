@@ -43,8 +43,9 @@
           <td><%= link_to actress.twitter_url, actress.twitter_url %></td>
         <% else %>
           <td></td>
-          <td><%= link_to 'Destroy', actress, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          
         <% end %>
+        <td><%= link_to 'Destroy', actress, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
