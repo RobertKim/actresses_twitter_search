@@ -1,5 +1,5 @@
 desc "Destroy actresses"
-task :destroy_actresses do
+task :destroy_actresses => :environment do
 
   keep = Actress.first(380)
   all = Actress.all
