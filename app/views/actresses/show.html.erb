@@ -1,17 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class="pure">
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Actress:</strong>
-  <%= @actress.actress %>
-</p>
+	<p>
+	  <strong>Actress:</strong>
+	  <%= @actress.actress %>
+	</p>
 
 
-<% if @actress.twitter_url.present? %>
-<p>
-  <strong>Twitter website:</strong>
-  <%= link_to @actress.twitter_url, @actress.twitter_url %>
-</p>
-<% end %>
+	<% if @actress.twitter_url.present? %>
+	<p>
+	  <strong>Twitter website:</strong>
+	  <%= link_to @actress.twitter_url, @actress.twitter_url %>
+	</p>
+	<% end %>
 
-<%= link_to 'Edit', edit_actress_path(@actress) %> |
-<%= link_to 'Back', actresses_path %>
+	<%= link_to 'Back to Home', actresses_path %>
+</div>
